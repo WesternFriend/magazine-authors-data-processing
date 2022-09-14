@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "wf-magazine-authors-data-processing"
+version = "0.1.0"
+description = "Python scripts to process the exported Magazine Authors data into the desired shape."
+authors = ["Brylie Christopher Oxley <brylie@amble.fi>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "wf_magazine_authors_data_processing"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^3.4.7"
+pandas = "^1.4.4"
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.8.0"
+jupyterlab-black = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
