@@ -29,7 +29,7 @@ with open("magazine_authors_parsed.csv", "w", newline="") as parsed_authors_csv:
     fieldnames = [
         "given_name",
         "family_name",
-        "original_name",
+        "drupal_full_name",
         "drupal_author_id",
     ]
     writer = csv.DictWriter(
