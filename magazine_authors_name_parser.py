@@ -11,15 +11,15 @@ with open("magazine_authors_uncleaned.csv", "r") as authors_csv:
     authors = csv.DictReader(authors_csv)
 
     for author in authors:
-        original_name = author["drupal_full_name"]
-        author_split = original_name.split(sep=" ")
-        family_name = author_split.pop()
-        given_name = " ".join(author_split)
+        drupal_full_name = author["drupal_full_name"]
+        name_split = drupal_full_name.split(sep=" ")
+        family_name = name_split.pop()
+        given_name = " ".join(name_split)
 
         parsed_author = {
             "given_name": given_name,
             "family_name": family_name,
-            "original_name": original_name,
+            "drupal_full_name": drupal_full_name,
             "drupal_author_id": author["drupal_author_id"],
         }
 
