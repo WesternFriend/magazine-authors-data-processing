@@ -12,6 +12,7 @@ python = "^3.10"
 jupyterlab = "^3.4.7"
 pandas = "^1.4.4"
 jupyterlab-code-formatter = "^1.5.3"
+openpyxl = "^3.1.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.8.0"

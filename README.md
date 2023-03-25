@@ -1,11 +1,11 @@
-# Magazine Authors data processing
+# Magazine authors data processing
 
-Python scripts to process the exported Magazine Authors data into the desired shape.
+Python scripts to process the exported Magazine authors data into the desired shape.
 
-## Data processing steps
+## Usage
 
-1. export raw Magazine Authors from Drupal
-2. download the previously cleaned and de-duped authors file from Nextcloud
-3. use the `magazine_authors_name_parser.py` script to separate author names into `given_name` and `family_name` columns
-4. Use `magazine_authors_merge_cleaned.ipynb` to merge the newly parsed authors into the previously cleaned, deduped authors file
-5. upload the newly merged authors file to Nextcloud, so Mary can manually review and identify potential duplicates
+1. download the file `magazine_authors_uncleaned.csv` from the Western Friend website
+2. download the most recent "magazine authors merged" file from Western Friend docs
+3. run `python magazine_authors_parser.py` to automatically split new author names
+4. run `magazine_authors_merge_cleaned.ipynb` to produce merged authors for manual review
+5. use the reviewed magazine authors in the new website content importer
