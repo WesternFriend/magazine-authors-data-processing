@@ -2,7 +2,7 @@ import csv
 
 parsed_authors = []
 
-with open("magazine_authors_uncleaned.csv") as authors_csv:
+with open("data/magazine_authors_uncleaned.csv") as authors_csv:
     authors = csv.DictReader(authors_csv)
 
     for author in authors:
@@ -21,7 +21,7 @@ with open("magazine_authors_uncleaned.csv") as authors_csv:
 
         parsed_authors.append(parsed_author)
 
-with open("magazine_authors_parsed.csv", "w", newline="") as parsed_authors_csv:
+with open("data/magazine_authors_parsed.csv", "w", newline="") as parsed_authors_csv:
     writer = csv.DictWriter(
         parsed_authors_csv,
         fieldnames=[
